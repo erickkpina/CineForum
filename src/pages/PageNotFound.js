@@ -1,12 +1,8 @@
 import { Link } from "react-router-dom"
-import { useEffect } from "react"
+import { useTitle } from "../hooks/useTitle"
 
 export const PageNotFound = () => {
-
-
-	useEffect(() => {
-		document.title = `Page Not Found - Cineforum`;
-	});
+	useTitle('Page Not Found');
 
 	return (
 		<main>

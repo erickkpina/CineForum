@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Backup from "../assets/images/backup.png";
+import { useTitle } from "../hooks/useTitle";
 
 export const MovieDetail = () => {
 	const params = useParams();
@@ -27,9 +28,7 @@ export const MovieDetail = () => {
 		}
 	};
 
-	useEffect(() => {
-		document.title = `${movie.title} - Cineforum`;
-	});
+	useTitle(`${movie.title}`);
 
 	return (
 		<main>
